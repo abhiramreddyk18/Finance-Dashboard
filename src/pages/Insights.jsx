@@ -1,3 +1,8 @@
+import { useState } from "react"
+import "../styles/Insights.css"
+import { useAppContext } from "../context/AppContext"
+import { FaChartBar, FaMoneyBillWave, FaCalendarDay, FaHashtag, FaTrophy } from "react-icons/fa"
+
 function Insights() {
     const { transactions } = useAppContext()
     const [visible_month, setVisibleMonth] = useState("")
