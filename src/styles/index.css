@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #1e293b;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .dashboard h1,
+body.dark .page h1 {
+  color: #e2e8f0;
+}
+
+body.dark .card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .label {
+  color: #94a3b8;
+}
+
+body.dark .val {
+  color: #e2e8f0;
+}
+
+body.dark .c-bal {
+  background: #172554;
+  border-left-color: #3b82f6;
+}
+
+body.dark .c-bal .val {
+  color: #60a5fa;
+}
+
+body.dark .c-inc {
+  background: #14532d;
+  border-left-color: #16a34a;
+}
+
+body.dark .c-inc .val {
+  color: #4ade80;
+}
+
+body.dark .c-exp {
+  background: #450a0a;
+  border-left-color: #dc2626;
+}
+
+body.dark .c-exp .val {
+  color: #f87171;
+}
+
+body.dark .box {
+  background: #1e293b;
+}
+
+body.dark .box h2 {
+  color: #cbd5e1;
+}
+
+body.dark .value {
+  color: #e2e8f0;
+}
+
+body.dark .card h3 {
+  color: #94a3b8;
+}
+
+body.dark .detail {
+  color: #64748b;
+}
+
+body.dark .amt {
+  color: #cbd5e1;
+}
+
+body.dark .bar-bg {
+  background: #334155;
+}
+
+body.dark .table {
+  background: #1e293b;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .table thead {
+  background: #334155;
+}
+
+body.dark .table th {
+  color: #94a3b8;
+}
+
+body.dark .table td {
+  color: #cbd5e1;
+  border-top-color: #334155;
+}
+
+body.dark .table tbody tr:hover {
+  background: #334155;
+}
+
+body.dark .inputs,
+body.dark .filter,
+body.dark .edit-in {
+  background: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+body.dark .form {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .btn-cancel {
+  background: #334155;
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+body.dark .empty {
+  color: #64748b;
+}

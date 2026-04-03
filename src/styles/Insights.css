@@ -1,0 +1,121 @@
+.page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page h1 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card.focus {
+    background: #1e293b;
+    color: #fff;
+    border: none;
+}
+
+.card.focus h3 {
+    color: #94a3b8;
+}
+
+.card.focus .value {
+    color: #fff;
+}
+
+.card.focus .detail {
+    color: #cbd5e1;
+}
+
+.icon {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.detail {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: #64748b;
+    width: 55px;
+    font-weight: 500;
+}
+
+.bar-bg {
+    flex: 1;
+    height: 10px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.inc {
+    background: #16a34a;
+}
+
+.exp {
+    background: #dc2626;
+}
+
+.amt {
+    font-size: 0.8rem;
+    color: #334155;
+    font-weight: 600;
+    min-width: 70px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
