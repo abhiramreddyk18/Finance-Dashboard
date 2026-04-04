@@ -22,20 +22,21 @@ function Dashboard() {
     bal = inc - exp
 
     let trend = []
-    let runningBal = 0
-    let sortedTxs = [...trans].sort((a, b) => new Date(a.date) - new Date(b.date))
+    let balance = 0
+    let sorted_trans = [...trans].sort((a, b) => new Date(a.date) - new Date(b.date))
 
-    for (let i = 0; i < sortedTxs.length; i++) {
-        if (sortedTxs[i].type === "income") {
-            runningBal += sortedTxs[i].amount
+    for (let i = 0; i < sorted_trans.length; i++) {
+        if (sorted_trans[i].type === "income") {
+            balance += sorted_trans[i].amount
         } else {
-            runningBal -= sortedTxs[i].amount
+            balance -= sorted_trans[i].amount
         }
         trend.push({
-            name: sortedTxs[i].date,
-            val: runningBal
+            name: sorted_trans[i].date,
+            val: balance
         })
     }
+
 
     let catSum = {}
     for (let i = 0; i < trans.length; i++) {
