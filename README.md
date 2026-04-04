@@ -1,104 +1,70 @@
-# Finance Dashboard
+Finance Dashboard
 
-A clean and interactive finance dashboard built with React and Vite. This project helps users track and understand their financial activity through summary cards, visualizations, and insights.
+This project is like a finance dashboard I created using React and Vite. It is mainly used to track financial things like income and expense and all. I tried to make it simple but also useful to understand where money is going.
 
-## Tech Stack
+Tech Stack
 
-- **React** - UI framework
-- **Vite** - Build tool and dev server
-- **Recharts** - Charts (Line chart, Pie chart)
-- **React Router** - Page navigation
-- **React Icons** - Icon components
-- **Vanilla CSS** - Styling
+I used React for UI and Vite for running fast. Also used Recharts for graphs like line and pie chart. React Router is there for page changing. Icons I used from react icons. Styling I just did with normal CSS not any framework.
 
-## Features
+Features
+Dashboard
 
-### Dashboard Overview
-- Summary cards showing Total Balance, Total Income, and Total Expenses
-- **Balance Trend** - Line chart showing how account balance changes day by day
-- **Spending Breakdown** - Pie chart showing category-wise expense distribution
+In dashboard it shows some cards like total balance, income and expense. Also there is one line chart which shows how balance is changing day by day but yeah data is not real its static.
 
-### Transactions
-- Table displaying all transactions with Date, Category, Type, and Amount
-- **Search** by category name
-- **Filter** by type (All / Income / Expense)
-- **Sort** by date or amount
-- Empty state handling when no results found
+Also one pie chart is there which shows spending based on categories like food, travel etc.
 
-### Insights
-- **Highest Spending Category** - Which category you spent most on
-- **Monthly Comparison** - Income vs Expense bar comparison with savings rate
-- **Largest Single Expense** - The biggest one-time expense
-- **Average Daily Spending** - Total expense divided by active spending days
-- **Transaction Count** - Total transactions split by income and expense
+Transactions
 
-### Role Based UI (RBAC)
-Simulated on the frontend using a dropdown toggle in the header:
-- **Viewer** - Can only view dashboard, transactions, and insights
-- **Admin** - Can add new transactions and delete existing ones
+There is a table which shows all transactions like date, category, type and amount.
 
-Switch roles using the dropdown in the top-right corner of the navigation bar.
+User can search also but only by category name. Filter also added like income or expense or all. Sorting also there for date and amount but not very advanced sorting just basic.
 
-### State Management
-- Used **React Context API** (AppContext) to manage:
-  - Transactions data (add, delete, edit)
-  - Current user role (viewer / admin)
-  - All components consume from a single shared context
+If no data then it shows empty message.
 
-## Project Structure
+Insights
 
-```
-src/
-  context/
-    AppContext.jsx          # Central state management
-  components/
-    Header.jsx              # Navigation bar with role toggle
-    Header.css
-  pages/
-    Dashboard.jsx           # Summary cards + charts
-    Transaction.jsx         # Transaction list with CRUD
-    Insights.jsx            # Financial insights cards
-  styles/
-    index.css               # Global reset styles
-    Dashboard.css
-    Transaction.css
-    Insights.css
-  data/
-    transactions.js         # Mock/static transaction data
-  App.jsx                   # Routes and provider setup
-  main.jsx                  # Entry point
-```
+This part shows some analysis type things.
 
-## Setup Instructions
+Like which category user spent more money. Then monthly comparison also there income vs expense and it shows saving also but calculation is simple only.
 
-1. Clone the repository
-```
-git clone <repository-url>
-cd <project-folder>
-```
+Also shows biggest expense one time and average daily spending. Transaction count also there but nothing too complex.
 
-2. Install dependencies
-```
-npm install
-```
+Role Based UI
 
-3. Start the development server
-```
-npm run dev
-```
+I added role system but only frontend simulation.
 
-4. Open in browser - visit http://localhost:5173
+There is dropdown in header. If user selects viewer then only can see data. If admin then can add and delete transactions.
 
-## Design Approach
+This is not real authentication just simple condition.
 
-- Kept the UI clean and minimal with simple CSS (no utility frameworks)
-- Used basic JavaScript logic (for loops, if-else) for all data processing
-- Separated concerns: pages for views, context for state, styles in one folder
-- All data flows through React Context so components stay in sync
-- Responsive layout using CSS Grid and media queries
+State Management
 
-## Responsive Design
+Used Context API for storing data.
 
-- Dashboard cards stack vertically on small screens
-- Charts and insight cards adapt to single-column layout on mobile
-- Navigation remains accessible on all screen sizes
+All transactions are stored there and also role. From there only all components taking data.
+
+No redux or anything because project is small.
+
+Project Structure
+
+I created folders like context, components, pages and styles.
+
+Inside pages there are dashboard, transaction and insights. Context file handles all data.
+
+Not followed very strict architecture but tried to keep it clean.
+
+Setup
+
+First clone project then run npm install and then npm run dev. It will start on localhost.
+
+Design
+
+UI I kept very simple not too fancy. Used normal CSS. No tailwind or bootstrap.
+
+Logic also simple only like for loops and if else. No advanced optimization or anything.
+
+Tried to separate code but still some parts can be better.
+
+Responsive
+
+It works in mobile also but maybe not perfect in all screen sizes. Cards go one below another in small screen. Charts also adjust somehow.
